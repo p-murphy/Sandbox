@@ -32,11 +32,13 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 		//TSubclassOf<class APickup> WhatToSpawn;
 	    TSubclassOf<class ADirectoryOutput> WhatToSpawn;
+	    //UClass* WhatToSpawn;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Spawning")
 	FTimerHandle SpawnTimer;
 
 	// Minimum spawn delay
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Spawning")
 		float SpawnDelayRangeLow;
 
 	// Maximum spawn delay

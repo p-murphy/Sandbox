@@ -10,6 +10,11 @@ class SANDBOX_API ADirectoryOutput : public AActor
 {
 	GENERATED_BODY()
 	
+private:
+	//How long, in seconds, the countdown will run
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning", meta = (AllowPrivateAccess = "true"))
+	int32 CountdownTime;
+
 public:	
 	// Sets default values for this actor's properties
 	ADirectoryOutput();
@@ -20,8 +25,9 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-	//How long, in seconds, the countdown will run
-	int32 CountdownTime;
+	////How long, in seconds, the countdown will run
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning")
+	//int32 CountdownTime;
 
 	UTextRenderComponent* CountdownText;
 
